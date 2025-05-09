@@ -35,8 +35,7 @@
 
     <section id="home" class="min-h-screen flex items-center hero-bg-animated pt-20 md:pt-0 relative overflow-hidden">
         <div class="absolute inset-0 z-0 hero-particles">
-            </div>
-
+        </div>
         <div class="container mx-auto px-6 text-center relative z-10">
             <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 animated-heading">
                 <span>Unlock</span> <span>the</span> <span>Future.</span><br class="hidden sm:block">
@@ -91,8 +90,30 @@
                 </p>
             </div>
             <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-                <div class="opacity-0" style="animation-delay: 0.2s;">
-                    <img src="https://placehold.co/600x400/0a0f1f/00c6ff?text=Futuristic+Secure+Interface" alt="Futuristic Secure Interface" class="rounded-lg shadow-xl w-full h-auto object-cover border-2 border-cyan-500/30 hover:border-cyan-500/70 transition-all duration-300" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1a2238/00c6ff?text=Secure+Access';">
+                <div class="opacity-0 flex justify-center items-center" style="animation-delay: 0.2s;">
+                    <svg class="animated-lock" width="150" height="200" viewBox="0 -20 100 155" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="lockBodyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#2d3748; stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#1a202c; stop-opacity:1" />
+                            </linearGradient>
+                            <filter id="lockGlow" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        <rect class="lock-body-fill" x="20" y="50" width="70" height="75" rx="10" fill="url(#lockBodyGradient)" stroke="#4a5568" stroke-width="2"/>
+                        <rect class="lock-body-highlight" x="25" y="55" width="60" height="10" rx="5" fill="#4a5568" opacity="0.5"/>
+                        
+                        <path class="shackle" d="M30 50 V25 C30 11.1929 41.1929 0 55 0 C68.8071 0 80 11.1929 80 25 V50" stroke="#718096" stroke-width="10" stroke-linecap="round"/>
+                        
+                        <circle class="keyhole-bg" cx="55" cy="88" r="8" fill="#1a202c"/>
+                        <path class="keyhole-shape" d="M55 82 V88 M51 92 H59" stroke="#00c6ff" stroke-width="2" stroke-linecap="round"/>
+                        <circle class="keyhole-glow-pulse" cx="55" cy="88" r="5" fill="#00c6ff" opacity="0"/>
+                    </svg>
                 </div>
                 <div class="opacity-0" style="animation-delay: 0.4s;">
                     <h3 class="text-2xl font-semibold text-white mb-4 text-glow-subtle">Introducing Biometric Peace of Mind</h3>
