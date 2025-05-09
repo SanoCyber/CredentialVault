@@ -219,3 +219,63 @@ body {
 html {
     scroll-behavior: smooth;
 }
+
+/* Animated Lock SVG Styles */
+.animated-lock {
+    /* Base styling for the SVG container if needed */
+    filter: drop-shadow(0 4px 8px rgba(0, 198, 255, 0.3)); /* Add a subtle glow */
+}
+
+.animated-lock .shackle {
+    transform-origin: 55px 50px; /* Center of the shackle's base for rotation */
+    animation: unlockShackle 4s ease-in-out infinite;
+}
+
+.animated-lock .keyhole-glow-pulse {
+    animation: pulseKeyhole 4s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes unlockShackle {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    20% { /* Start unlocking */
+        transform: translateY(-15px) rotate(0deg); /* Move up */
+    }
+    30% {
+        transform: translateY(-15px) rotate(-15deg); /* Rotate */
+    }
+    50% { /* Hold unlocked state */
+        transform: translateY(-15px) rotate(-15deg);
+    }
+    70% { /* Start locking */
+        transform: translateY(-15px) rotate(0deg); /* Rotate back */
+    }
+    80% {
+        transform: translateY(0) rotate(0deg); /* Move down */
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+@keyframes pulseKeyhole {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    10% { /* Brief pulse as shackle starts to move */
+        opacity: 0.7;
+        transform: scale(1.2);
+    }
+    20% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    /* Long pause while lock is static or moving back */
+    100% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
