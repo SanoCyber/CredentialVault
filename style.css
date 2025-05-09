@@ -1,0 +1,221 @@
+/* style.css for CredentialVault */
+
+/* Base body styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0a0f1f; /* Dark blue-ish background */
+    color: #e0e0e0; /* Light gray text */
+    overflow-x: hidden; /* Prevent horizontal scroll often caused by animations */
+}
+
+/* Animated Hero Background */
+.hero-bg-animated {
+    background: linear-gradient(-45deg, #0a0f1f, #101c3a, #071a38, #00c6ff);
+    background-size: 400% 400%;
+    animation: gradientBG 25s ease infinite;
+    position: relative; /* Needed for z-indexing if we add particle effects */
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Optional: Subtle particle-like overlay (pure CSS) */
+.hero-particles::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100%; height: 100%;
+    background-image: radial-gradient(circle, rgba(0, 198, 255, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px; /* Adjust size of particles */
+    animation: particlesAnim 30s linear infinite;
+    opacity: 0.5;
+}
+@keyframes particlesAnim {
+    from { transform: translate(0, 0); }
+    to { transform: translate(-20px, -20px); } /* Adjust movement */
+}
+
+
+/* Text Glow Effect */
+.text-glow {
+    color: #00e1ff; /* Brighter cyan for glow effect */
+    text-shadow: 0 0 8px rgba(0, 198, 255, 0.7),
+                 0 0 12px rgba(0, 198, 255, 0.5),
+                 0 0 20px rgba(0, 198, 255, 0.3);
+}
+.text-glow-subtle {
+    color: #e0e0e0; /* Or inherit */
+    text-shadow: 0 0 6px rgba(0, 198, 255, 0.4);
+}
+
+
+/* Navigation Link Styling */
+.nav-link {
+    position: relative;
+    color: #cbd5e1; /* Tailwind gray-300 */
+    transition: color 0.3s ease;
+    padding-bottom: 4px;
+}
+.nav-link:hover {
+    color: #00c6ff;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #00c6ff;
+    transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+    width: 100%;
+}
+.nav-link-footer {
+    color: #6b7280; /* Tailwind gray-500 */
+    transition: color 0.3s ease;
+}
+.nav-link-footer:hover {
+    color: #00c6ff;
+}
+
+
+/* Button Enhancements */
+.btn-primary, .btn-secondary {
+    position: relative;
+    overflow: hidden; /* For pseudo-element effects */
+    z-index: 1;
+}
+.btn-primary {
+    background-color: #00c6ff;
+    color: #0a0f1f;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 198, 255, 0.2);
+}
+.btn-primary:hover {
+    background-color: #00a0cc;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 198, 255, 0.4);
+}
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid #00c6ff;
+    color: #00c6ff;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+     box-shadow: 0 0 0 rgba(0, 198, 255, 0); /* Initial no shadow */
+}
+.btn-secondary:hover {
+    background-color: #00c6ff;
+    color: #0a0f1f;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 198, 255, 0.3);
+}
+.btn-arrow {
+    display: inline-block;
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+.btn-primary:hover .btn-arrow, .btn-secondary:hover .btn-arrow {
+    transform: translateX(5px);
+}
+
+
+/* Feature Card Enhancements */
+.feature-card {
+    background-color: rgba(22, 30, 53, 0.7); /* Slightly more opaque */
+    border: 1px solid rgba(0, 198, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    backdrop-filter: blur(5px); /* Subtle glassmorphism */
+    -webkit-backdrop-filter: blur(5px);
+}
+.feature-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 198, 255, 0.15);
+    border-color: rgba(0, 198, 255, 0.5);
+}
+.feature-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Increased size */
+    height: 50px; /* Increased size */
+    background: linear-gradient(145deg, rgba(0, 198, 255, 0.15), rgba(0, 198, 255, 0.05));
+    color: #00c6ff;
+    border-radius: 12px; /* More rounded */
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-card:hover .feature-icon-wrapper {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 198, 255, 0.3);
+}
+
+
+/* Input field styling (already good, minor focus enhancement) */
+.input-field {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #e0e0e0;
+}
+.input-field:focus {
+    border-color: #00c6ff;
+    box-shadow: 0 0 0 3px rgba(0, 198, 255, 0.4), 0 0 15px rgba(0,198,255,0.2); /* Enhanced focus glow */
+    outline: none;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #0a0f1f; }
+::-webkit-scrollbar-thumb { background: #007799; border-radius: 5px; border: 2px solid #0a0f1f; }
+::-webkit-scrollbar-thumb:hover { background: #00c6ff; }
+
+/* Animation: Keyframes for fadeInUp (already defined in previous JS, but good to have in CSS too) */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Initial state for elements to be animated by JS */
+.animated-heading span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.opacity-0 {
+    opacity: 0;
+}
+
+/* Pulse animations for Hero SVG */
+@keyframes pulse-slow {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 0.2; transform: scale(0.95); }
+}
+@keyframes pulse-medium {
+    0%, 100% { opacity: 0.75; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.98); }
+}
+@keyframes pulse-fast {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.1); }
+}
+.animate-pulse-slow { animation: pulse-slow 4s infinite ease-in-out; }
+.animate-pulse-medium { animation: pulse-medium 3s infinite ease-in-out; }
+.animate-pulse-fast { animation: pulse-fast 1.5s infinite ease-in-out; }
+
+
+/* Glassmorphism effect for modal */
+.modal-glass {
+    background: rgba(16, 24, 48, 0.85); /* Darker, more opaque background for better readability */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* For Safari */
+    border: 1px solid rgba(0, 198, 255, 0.35); /* Subtle cyan border */
+}
+
+html {
+    scroll-behavior: smooth;
+}

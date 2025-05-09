@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CredentialVault - The Future of Secure Access</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+
+    <header class="fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300" id="mainHeader">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold text-white">
+                Credential<span class="text-glow">Vault</span>
+            </a>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#signup" class="nav-link">Sign Up</a>
+            </nav>
+            <button id="mobileMenuButton" class="md:hidden text-gray-300 hover:text-[#00c6ff] focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-[rgba(10,15,31,0.9)] backdrop-blur-md mt-2 mx-6 rounded-lg shadow-xl">
+            <a href="#home" class="block px-4 py-3 text-gray-300 hover:bg-[#00c6ff] hover:text-[#0a0f1f] transition-colors duration-300 rounded-t-lg mobile-nav-link">Home</a>
+            <a href="#about" class="block px-4 py-3 text-gray-300 hover:bg-[#00c6ff] hover:text-[#0a0f1f] transition-colors duration-300 mobile-nav-link">About</a>
+            <a href="#features" class="block px-4 py-3 text-gray-300 hover:bg-[#00c6ff] hover:text-[#0a0f1f] transition-colors duration-300 mobile-nav-link">Features</a>
+            <a href="#signup" class="block px-4 py-3 text-gray-300 hover:bg-[#00c6ff] hover:text-[#0a0f1f] transition-colors duration-300 rounded-b-lg mobile-nav-link">Sign Up</a>
+        </div>
+    </header>
+
+    <section id="home" class="min-h-screen flex items-center hero-bg-animated pt-20 md:pt-0 relative overflow-hidden">
+        <div class="absolute inset-0 z-0 hero-particles">
+            </div>
+
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 animated-heading">
+                <span>Unlock</span> <span>the</span> <span>Future.</span><br class="hidden sm:block">
+                <span class="text-glow">Passwordless.</span> <span class="text-glow">Seamless.</span> <span class="text-glow">Secure.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto" style="opacity:0; animation-delay: 1.2s;">
+                Welcome to CredentialVault – where your identity is the key. Say goodbye to forgotten passwords and embrace effortless, biometric security.
+            </p>
+            <div style="opacity:0; animation-delay: 1.5s;">
+                <a href="#signup" class="btn-primary group font-semibold py-3 px-8 rounded-lg text-lg inline-block mr-4 mb-4 sm:mb-0">
+                    Join Waitlist
+                    <span class="btn-arrow">&rarr;</span>
+                </a>
+                <a href="#features" class="btn-secondary group font-semibold py-3 px-8 rounded-lg text-lg inline-block">
+                    Learn More
+                    <span class="btn-arrow">&rarr;</span>
+                </a>
+            </div>
+            <div class="mt-12 md:mt-16" style="opacity:0; animation-delay: 1.8s;">
+                <svg class="w-28 h-28 md:w-36 md:h-36 mx-auto text-[#00c6ff]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <filter id="glow-effect" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="2" class="opacity-50 animate-pulse-slow"/>
+                    <circle cx="50" cy="50" r="30" stroke="currentColor" stroke-width="2" class="opacity-75 animate-pulse-medium"/>
+                    <path d="M50 20 V10 M50 80 V90 M20 50 H10 M80 50 H90" stroke="currentColor" stroke-width="2" class="opacity-50"/>
+                    <path d="M35 65 Q50 75 65 65" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                    <path d="M30 58 Q50 68 70 58" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                    <path d="M28 50 Q50 58 72 50" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                    <path d="M30 42 Q50 32 70 42" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                    <path d="M35 35 Q50 25 65 35" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                    <circle cx="50" cy="50" r="8" fill="currentColor" filter="url(#glow-effect)" class="animate-pulse-fast"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 md:py-24 bg-[#101830]">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white animated-heading">
+                    <span>The</span> <span>Problem</span> <span>with</span> <span>Passwords</span>
+                </h2>
+                <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto opacity-0" style="animation-delay: 0.5s;">
+                    Traditional passwords are a hassle. They're easily forgotten, often weak, and a prime target for cyber threats. CredentialVault offers a revolutionary alternative.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div class="opacity-0" style="animation-delay: 0.2s;">
+                    <img src="https://placehold.co/600x400/0a0f1f/00c6ff?text=Futuristic+Secure+Interface" alt="Futuristic Secure Interface" class="rounded-lg shadow-xl w-full h-auto object-cover border-2 border-cyan-500/30 hover:border-cyan-500/70 transition-all duration-300" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1a2238/00c6ff?text=Secure+Access';">
+                </div>
+                <div class="opacity-0" style="animation-delay: 0.4s;">
+                    <h3 class="text-2xl font-semibold text-white mb-4 text-glow-subtle">Introducing Biometric Peace of Mind</h3>
+                    <p class="text-gray-300 mb-4 leading-relaxed">
+                        CredentialVault leverages the uniqueness of your biometrics – like fingerprints and facial recognition – to provide unparalleled security and convenience. No more complex password rules or recovery processes.
+                    </p>
+                    <p class="text-gray-300 leading-relaxed">
+                        Our cutting-edge technology ensures that only you can access your accounts, making your digital life simpler and safer. Imagine logging into all your services with just a touch or a glance.
+                    </p>
+                    <ul class="mt-6 space-y-3 text-gray-300">
+                        <li class="flex items-center opacity-0" style="animation-delay: 0.6s;">
+                            <svg class="w-5 h-5 text-[#00c6ff] mr-3 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            Eliminate password fatigue and vulnerabilities.
+                        </li>
+                        <li class="flex items-center opacity-0" style="animation-delay: 0.7s;">
+                            <svg class="w-5 h-5 text-[#00c6ff] mr-3 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            Experience lightning-fast, secure logins.
+                        </li>
+                        <li class="flex items-center opacity-0" style="animation-delay: 0.8s;">
+                            <svg class="w-5 h-5 text-[#00c6ff] mr-3 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            Protect your digital identity with advanced technology.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white animated-heading">
+                    <span>Why</span> <span class="text-glow">Choose</span> <span>CredentialVault?</span>
+                </h2>
+                <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto opacity-0" style="animation-delay: 0.5s;">
+                    Discover the advantages of a truly passwordless future.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="feature-card p-6 rounded-xl opacity-0" style="animation-delay: 0.1s;">
+                    <div class="feature-icon-wrapper">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5a4.125 4.125 0 100 8.25 4.125 4.125 0 000-8.25z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M15.635 12.75a.75.75 0 000-1.5H8.365a.75.75 0 000 1.5h7.27z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2 mt-4">Advanced Biometrics</h3>
+                    <p class="text-gray-400">Utilizes cutting-edge fingerprint and facial recognition technology for robust and reliable authentication.</p>
+                </div>
+                <div class="feature-card p-6 rounded-xl opacity-0" style="animation-delay: 0.2s;">
+                     <div class="feature-icon-wrapper">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2 mt-4">Effortless Access</h3>
+                    <p class="text-gray-400">Log in to your accounts in seconds. No more typing passwords or struggling with forgotten credentials.</p>
+                </div>
+                <div class="feature-card p-6 rounded-xl opacity-0" style="animation-delay: 0.3s;">
+                    <div class="feature-icon-wrapper">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2 mt-4">Uncompromising Security</h3>
+                    <p class="text-gray-400">Built with a security-first approach, employing strong encryption and privacy-preserving techniques.</p>
+                </div>
+                 <div class="feature-card p-6 rounded-xl opacity-0" style="animation-delay: 0.4s;">
+                    <div class="feature-icon-wrapper">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93s.844.179 1.259-.043l.667-.478a1.125 1.125 0 011.488.223l.755.755a1.125 1.125 0 01.223 1.488l-.478.667c-.222.415-.173.939.043 1.259s.506.71.93.78l.894.149c.542.09.94.56.94 1.11v1.093c0 .55-.398 1.02-.94 1.11l-.894.149c-.424.07-.764.384-.93.78s-.179.844.043 1.259l.478.667a1.125 1.125 0 01-.223 1.488l-.755.755a1.125 1.125 0 01-1.488-.223l-.667-.478c-.415-.222-.939-.173-1.259.043s-.71.506-.78.93l-.149.894c-.09.542-.56.94-1.11.94h-1.093c-.55 0-1.02-.398-1.11-.94l-.149-.894c-.07-.424-.384-.764-.78-.93s-.844-.179-1.259.043l-.667.478a1.125 1.125 0 01-1.488-.223l-.755-.755a1.125 1.125 0 01-.223-1.488l.478-.667c.222-.415.173-.939-.043 1.259s-.506-.71-.93-.78l-.894-.149c-.542-.09-.94-.56-.94-1.11v-1.093c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.764.384.93-.78s.179-.844-.043-1.259l-.478-.667a1.125 1.125 0 01.223-1.488l.755-.755a1.125 1.125 0 011.488.223l.667.478c.415.222.939.173 1.259-.043s.71-.506.78-.93l.149-.894z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2 mt-4">Developer Friendly</h3>
+                    <p class="text-gray-400">Easy integration for developers and businesses to incorporate biometric authentication into their services (Future Goal).</p>
+                </div>
+                <div class="feature-card p-6 rounded-xl opacity-0" style="animation-delay: 0.5s;">
+                    <div class="feature-icon-wrapper">
+                         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18.375a9.375 9.375 0 006.538-2.963M12 18.375V21m0-2.625A9.375 9.375 0 015.462 15.412M21 12a9 9 0 11-18 0 9 9 0 0118 0zM6.5 12H3m3.5 0a2.5 2.5 0 015 0H21"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2 mt-4">Universal Access</h3>
+                    <p class="text-gray-400">Designed to work across your devices, providing a consistent and secure experience everywhere (Future Goal).</p>
+                </div>
+                <div class="feature-card p-6 rounded-xl opacity-0" style="animation-delay: 0.6s;">
+                    <div class="feature-icon-wrapper">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008.007 12c0-1.734-.296-3.404-.834-4.944M12 11c0-3.517 1.009-6.799 2.753-9.571m3.44 2.04l-.054.09A13.916 13.916 0 0115.993 12c0 1.734.296 3.404.834 4.944m-6.086 2.04A16.026 16.026 0 0112 21.75c2.946 0 5.643-1.108 7.686-2.952M12 3.75c-2.946 0-5.643 1.108-7.686 2.952"></path><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2 mt-4">Your Data, Your Control</h3>
+                    <p class="text-gray-400">We believe in data privacy. Your biometric information is handled with the utmost care and protection.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="signup" class="py-16 md:py-24 bg-[#101830]">
+        <div class="container mx-auto px-6">
+            <div class="max-w-xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 animated-heading">
+                    <span>Join</span> <span>the</span> <span class="text-glow">Revolution</span>
+                </h2>
+                <p class="text-lg text-gray-400 mb-8 opacity-0" style="animation-delay: 0.5s;">
+                    Be among the first to experience CredentialVault. Sign up for early access, updates, and news.
+                </p>
+                <form id="signupForm" class="space-y-6">
+                    <div>
+                        <label for="name" class="sr-only">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Full Name" class="w-full p-3 rounded-lg input-field focus:ring-2 focus:ring-[#00c6ff]" required>
+                        <p id="nameError" class="text-red-400 text-sm mt-1 text-left hidden">Please enter your name.</p>
+                    </div>
+                    <div>
+                        <label for="email" class="sr-only">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email Address" class="w-full p-3 rounded-lg input-field focus:ring-2 focus:ring-[#00c6ff]" required>
+                        <p id="emailError" class="text-red-400 text-sm mt-1 text-left hidden">Please enter a valid email address.</p>
+                    </div>
+                    <button type="submit" class="btn-primary group font-semibold py-3 px-8 rounded-lg text-lg w-full">
+                        Sign Up for Updates
+                        <span class="btn-arrow">&rarr;</span>
+                    </button>
+                    <p id="formSubmissionError" class="text-red-400 text-sm mt-2 hidden"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 text-center bg-[#0a0f1f] border-t border-gray-700/50">
+        <div class="container mx-auto px-6">
+            <p class="text-gray-500">&copy; <span id="currentYear"></span> CredentialVault. All rights reserved. The future of secure access.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="nav-link-footer">Privacy Policy</a>
+                <a href="#" class="nav-link-footer">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="successModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
+        <div class="fixed inset-0 bg-black opacity-75 modal-overlay"></div>
+        <div class="modal-glass p-6 md:p-8 rounded-xl shadow-2xl max-w-sm w-full text-center relative transform transition-all duration-300 ease-out scale-95 opacity-0">
+            <button id="closeModalButton" class="absolute top-3 right-3 text-gray-400 hover:text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <div class="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mb-4">
+                <svg class="h-10 w-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-2">Thank You!</h3>
+            <p class="text-gray-300">You've successfully signed up for updates from CredentialVault. We'll keep you posted!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
